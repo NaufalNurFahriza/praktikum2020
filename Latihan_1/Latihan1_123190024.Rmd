@@ -1,5 +1,5 @@
 ---
-title: "Modul 3"
+title: "Latihan 1 Modul 3"
 author: "Naufal Nur Fahriza"
 date: "9/17/2021"
 output: pdf_document
