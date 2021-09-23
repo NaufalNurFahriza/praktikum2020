@@ -1,0 +1,51 @@
+---
+title: "Latihan2_123190024"
+author: "Naufal Nur Fahriza"
+date: "9/23/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dslabs)
+data(murders)
+str(murders)
+length(murders$state)
+murders$state
+```
+##1. Pernyataan yang tepat adalah C. Data berisikan nama Negara / state dengan singkatannya, wilayah negara bagian dan populasi negara bagian serta jumlah total pembunuhan pada tahun 10.
+
+```{r}
+str(murders)
+```
+##2. Nama kolom yang digunakan yaitu state, abb, region, population, dan total.
+
+```{r}
+names(murders)
+```
+##3. Menyimpan singkatan state bagian ke variabel a. Lalu menyebutkan jenis class dari variabel tersebut.
+
+```{r}
+a = murders$abb
+class(a)
+```
+##4. Mengekstrak singkatan state tadi lalu disimpian pada variabel b. Maka hasil perbandingannya semua bernilai TRUE bisa dikatakan kedua variabel memiliki data yang sama.
+
+```{r}
+b = murders[[2]]
+class(b)
+b == a
+```
+##5. Menentukan jumlah region yang dimiliki oleh dataset yang berjumlah empat.
+
+```{r}
+length(levels(murders$region))
+```
+##6. Menampilkan tabel yang berisi jumlah state pada setiap region
+
+```{r}
+table(murders$region)
+```
